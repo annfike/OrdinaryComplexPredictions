@@ -8,9 +8,10 @@ from dotenv import load_dotenv
 def main():
     load_dotenv()
     token = os.getenv("BITLY_TOKEN")
-    parser = argparse.ArgumentParser()
-    parser.add_argument('url', help='Ссылка')
+    parser = argparse.ArgumentParser(description='Get bitlink and it"s statistics')
+    parser.add_argument('url', help='В качестве аргумента надо указать ссылку')
     args = parser.parse_args()
+    print(args.accumulate(args.integers))
     url = args.url
     try:
         if is_bitlink(token,url):
