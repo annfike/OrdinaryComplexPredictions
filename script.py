@@ -14,7 +14,7 @@ def main():
     print(args.accumulate(args.integers))
     url = args.url
     try:
-        if is_bitlink(token,url):
+        if is_bitlink(token, url):
             print(f'По вашей ссылке прошли: {count_clicks(token, url)} раз(а)')
         else:
             print(f'Битлинк:  {shorten_link(token, url)}')
